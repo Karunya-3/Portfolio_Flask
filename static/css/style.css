@@ -1,0 +1,212 @@
+/* Custom styles to complement Bootstrap dark theme */
+:root {
+    --bs-success-rgb: 100, 255, 218;
+}
+
+body {
+    background-color: #0a192f;
+    color: #e6f1ff;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+section {
+    padding: 100px 0;
+}
+/* Home Section Styles */
+#home {
+    background: linear-gradient(to right, #0a192f, #172a45);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #home {
+        text-align: center;
+    }
+    #home img {
+        max-width: 250px !important;
+        margin-top: 30px;
+    }
+}
+
+/* Simple fade-in-up animation */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle button hover effect */
+.hover-bounce {
+    transition: transform 0.3s ease;
+}
+
+.hover-bounce:hover {
+    transform: translateY(-3px);
+}
+
+/* Very subtle background pulse */
+#home {
+    animation: subtle-pulse 12s infinite alternate;
+}
+
+@keyframes subtle-pulse {
+    to { background-position: 100% 50%; }
+}
+
+.navbar {
+    background-color: #172a45 !important;
+}
+
+.bg-dark {
+    background-color: #0a192f !important;
+}
+.custom-img {
+    max-width: 50%;    
+    margin-left: auto; 
+    display: block;
+    border-radius: 20%;
+}
+
+.card {
+    background-color: #172a45;
+    border: 1px solid #30363d;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.text-success {
+    color: #64ffda !important;
+}
+
+.btn-outline-success {
+    --bs-btn-color: #64ffda;
+    --bs-btn-border-color: #64ffda;
+    --bs-btn-hover-bg: #64ffda;
+    --bs-btn-hover-border-color: #64ffda;
+    --bs-btn-active-bg: #64ffda;
+    --bs-btn-active-border-color: #64ffda;
+    --bs-btn-disabled-color: #64ffda;
+    --bs-btn-disabled-border-color: #64ffda;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+/* Skills Section Styles */
+/* Skills Section - Vertical Layout with Clean Lines */
+.skill-column {
+    background: linear-gradient(145deg, #172a45, #1f3a68);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    height: 100%;
+}
+
+.skill-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(100, 255, 218, 0.2);
+}
+
+.skill-category {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    font-weight: 600;
+    padding: 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    padding: 1rem 1.5rem;
+    color: #ccd6f6;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.skill-item:last-child {
+    border-bottom: none;
+}
+
+.skill-item:hover {
+    background: rgba(100, 255, 218, 0.05);
+    padding-left: 2rem;
+    color: #64ffda;
+}
+
+.skill-item:hover::before {
+    content: "→";
+    position: absolute;
+    left: 1rem;
+    color: #64ffda;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-column {
+        margin-bottom: 1.5rem;
+    }
+    
+    .skill-item {
+        padding: 0.75rem 1.25rem;
+    }
+    
+    .skill-item:hover {
+        padding-left: 1.5rem;
+    }
+}
+/* Project Detail Page Styles */
+.project-detail .card {
+    background-color: #172a45;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-detail .card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.project-detail .badge {
+    background-color: rgba(100, 255, 218, 0.2);
+    color: #64ffda;
+    font-weight: normal;
+}
+
+.project-detail h1, 
+.project-detail h3, 
+.project-detail h4 {
+    font-weight: 600;
+}
+
+.project-detail .lead {
+    color: #8892b0;
+}

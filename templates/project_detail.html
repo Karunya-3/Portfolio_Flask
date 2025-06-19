@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="project-detail py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="text-success">{{ project.title }}</h1>
+            <p class="lead">{{ project.description }}</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename=project.image) }}" class="card-img-top" alt="{{ project.title }}">
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="text-success mb-4">Project Details</h3>
+                        <p>{{ project.details }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4 class="text-success">Technologies Used</h4>
+                                <ul class="list-unstyled">
+                                    {% for tech in project.technologies %}
+                                    <li class="mb-2">
+                                        <span class="badge bg-success me-2">✓</span>
+                                        {{ tech }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4 class="text-success">Links</h4>
+                                <div class="d-flex flex-column">
+                                    <a href="{{ project.github_link }}" target="_blank" class="btn btn-outline-success mb-3">
+                                        <i class="bi bi-github me-2"></i> View on GitHub
+                                    </a>
+                                    {% if project.live_demo %}
+                                    <a href="{{ project.live_demo }}" target="_blank" class="btn btn-success">
+                                        <i class="bi bi-box-arrow-up-right me-2"></i> Live Demo
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('index') }}#projects" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i> Back to Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
