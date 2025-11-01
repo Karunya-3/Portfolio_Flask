@@ -24,6 +24,16 @@ projects = [
         'github_link': 'https://github.com/Karunya-3/RoleRadar',
         'live_demo': 'https://roleradar-01.onrender.com/'
     },
+    {
+        'id': 3,
+        'title': 'Menstrual Cycle predictor',
+        'description': 'An AI-powered tool to predict menstrual cycles using machine learning.',
+        'technologies': ['Streamlit','python','ML','scikit-learn'],
+        'image': 'images/cycle.png',
+        'details': 'Developed a predictive analytics tool that forecasts menstrual cycles and based on user data. Implemented machine learning algorithms to analyze cycle patterns and provide accurate predictions. Features an intuitive Streamlit interface for easy data input and visualization of cycle trends. The application helps users track their reproductive health and better understand their menstrual patterns through data-driven insights.',
+        'github_link': 'https://github.com/Karunya-3/AI_Predict_Cycles',
+        'live_demo': 'https://karunya-3-ai-predict-cycles-page-l2hz0z.streamlit.app/'
+    },
 ]
 
 skills = {
