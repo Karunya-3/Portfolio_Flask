@@ -34,6 +34,16 @@ projects = [
         'github_link': 'https://github.com/Karunya-3/AI_Predict_Cycles',
         'live_demo': 'https://karunya-3-ai-predict-cycles-page-l2hz0z.streamlit.app/'
     },
+    {
+        'id': 4,
+        'title': 'Real time Chat Application',
+        'description': 'Enables you to chat in real time',
+        'technologies': ['React','Socket.io','Node'],
+        'image': 'images/chat.png',
+        'details': 'Built a real-time predictive analytics platform using React and Socket.io that forecasts menstrual cycles through interactive chat. Implemented machine learning algorithms to analyze user-provided cycle patterns, delivering accurate predictions via instant messaging. Features a dynamic React interface with live data visualization, enabling users to input cycle details, track reproductive health, and receive data-driven insights through seamless real-time communication.',
+        'github_link': 'https://github.com/Karunya-3/Chat-Application',
+        'live_demo': 'https://chat-application-lemon-chi.vercel.app/'
+    }
 ]
 
 skills = {
