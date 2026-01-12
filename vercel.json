@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/templates/index.html"
+    },
+    {
+      "source": "/project",
+      "destination": "/templates/project_detail.html"
+    }
+  ]
+}
